@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ topic.name }}</title>
+</head>
+<body>
+    <header>
+        <h1>{{ topic.name }}</h1>
+    </header>
+
+    <section>
+        <h2>Description</h2>
+        <p>{{ topic.description }}</p>
+    </section>
+
+    {% if topic.symptoms %}
+    <section>
+        <h2>Symptoms</h2>
+        <p>{{ topic.symptoms }}</p>
+    </section>
+    {% endif %}
+
+    {% if topic.cause %}
+    <section>
+        <h2>Cause</h2>
+        <p>{{ topic.cause }}</p>
+    </section>
+    {% endif %}
+
+    {% if topic.prevention %}
+    <section>
+        <h2>Prevention</h2>
+        <p>{{ topic.prevention }}</p>
+    </section>
+    {% endif %}
+
+    {% if topic.treatment %}
+    <section>
+        <h2>Treatment</h2>
+        <p>{{ topic.treatment }}</p>
+    </section>
+    {% endif %}
+</body>
+</html>
+
+

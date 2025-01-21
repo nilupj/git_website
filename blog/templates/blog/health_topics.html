@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block content %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health A-Z</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Health A-Z</h1>
+    </header>
+
+    <div class="letter-nav">
+    <ul>
+        {% for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" %}
+        <li>
+            <button 
+                class="letter-btn {% if letter in grouped_topics.keys %}active{% endif %}" 
+                {% if letter in grouped_topics.keys %} onclick="scrollToLetter('{{ letter }}')" {% else %} disabled {% endif %}>
+                {{ letter }}
+            </button>
+        </li>
+        {% endfor %}
+    </ul>
+    </div>
+    
+
+    <div id="topics-container">
+        {% for letter, topics in grouped_topics.items %}
+            <section id="section-{{ letter }}" class="topic-section">
+                <h2>Topics starting with "{{ letter }}"</h2>
+                <ul>
+                    {% for topic in topics %}
+                        <li>
+                            <a href="{% url 'topic_detail' topic.id %}">{{ topic.name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        {% endfor %}
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    {% endblock %}
+</body>
+</html>
+

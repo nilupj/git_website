@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Blog List</h1>
+  <p>Here are all the blog posts available:</p>
+
+  <!-- Alphabetically ordered list of blog pages -->
+  <ul>
+    {% for page in blog_pages %}
+      <li>
+        <a href="{{ page.url }}">{{ page.title }}</a>
+        <p>{{ page.intro }}</p>
+      </li>
+    {% empty %}
+      <p>No blog pages available.</p>
+    {% endfor %}
+  </ul>
+
+  <!-- Optional: Add pagination or other links here if you have many blog posts -->
+{% endblock %}
+

@@ -1,0 +1,22 @@
+/* health_app/static/health_app/css/style.css */
+
+.letter-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.letter-nav a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #333;
+}
+
+.letter-nav a.active {
+    background-color: #333;
+    color: #fff;
+}

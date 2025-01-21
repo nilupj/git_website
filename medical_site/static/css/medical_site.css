@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+/* Navbar */
+.navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 5px;
+}
+
+.nav-link {
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ccc;
+}
+
+/* Hero Section */
+section.bg-light {
+    text-align: center;
+    padding: 40px 15px;
+}
+
+/* Card Grid */
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .hero-section {
+        padding: 20px;
+    }
+
+    .card {
+        margin: 10px auto;
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .breadcrumb-item a {
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,19 @@
+.letter-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.letter-nav a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.letter-nav a.active {
+    background-color: #3498db;
+    color: #fff;
+}

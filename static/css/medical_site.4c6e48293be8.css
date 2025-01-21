@@ -1,0 +1,12 @@
+/* Adjusting NHS blue tones */
+.bg-primary {
+    background-color: #005eb8 !important;
+}
+.text-primary {
+    color: #005eb8 !important;
+}
+
+/* Custom card hover effect */
+.card:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
