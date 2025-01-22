@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ topic.name }}</title>
 </head>
+    {% block content %}
 <body>
     <header>
         <h1>{{ topic.name }}</h1>
@@ -42,6 +45,7 @@
         <p>{{ topic.treatment }}</p>
     </section>
     {% endif %}
+    {% endblock %}
 </body>
 </html>
 

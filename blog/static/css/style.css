@@ -1,50 +1,83 @@
+/* General reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    line-height: 1.6;
 }
 
 header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 2rem;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.alphabet {
+h1 {
+    margin: 0;
+}
+
+.letter-nav {
+    background-color: #f4f4f4;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.letter-nav ul {
+    list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
     justify-content: center;
-    gap: 5px;
-    margin-bottom: 20px;
 }
 
-.alphabet-btn {
-    padding: 10px 15px;
-    border: none;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    border-radius: 5px;
+.letter-nav li {
+    margin: 0 0.5rem;
 }
 
-.alphabet-btn:hover {
-    background-color: #ddd;
+.letter-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.letter-nav a:hover,
+.letter-nav .active a {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#topics-container {
+    padding: 2rem;
 }
 
 .topic-section {
-    display: none;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
-.topic-section.active {
-    display: block;
+.topic-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.hero {
-    position: relative;
-    height: 100vh;  /* Adjust the height of the hero section */
-    overflow: hidden;
+.topic-section ul {
+    list-style: none;
+    padding: 0;
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Ensure images cover the entire space */
+.topic-section li {
+    margin-bottom: 0.5rem;
+}
+
+.topic-section a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topic-section a:hover {
+    text-decoration: underline;
 }
