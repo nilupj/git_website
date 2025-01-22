@@ -1,0 +1,32 @@
+# Ignore system files and directories
+/bin/
+/boot/
+/dev/
+/etc/
+/home/
+/lib/
+/lib32/
+/lib64/
+/libx32/
+/opt/
+/proc/
+/root/
+/run/
+/sbin/
+/snap/
+/swapfile
+/sys/
+/tmp/
+/usr/
+/var/
+
+# Ignore Python virtual environment
+venv/
+env/
+
+# Ignore Python compiled files
+*.pyc
+__pycache__/
+
+# Ignore static files
+/staticfiles/
