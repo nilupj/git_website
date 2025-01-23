@@ -7,6 +7,12 @@
 
 {% block content %}
 <!-- Hero Section with Infinite Image Slider -->
+<form method="POST">
+    {% csrf_token %}
+    <!-- form fields here -->
+    <button type="submit">Submit</button>
+</form>
+
 <section id="hero" class="hero">
     <div id="carouselExampleInfinite" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" data-bs-wrap="true">
         <div class="carousel-inner">
@@ -47,6 +53,6 @@
 <div class="content">
     {{ page.body|richtext }}
 </div>
-
+<script src="{% static 'blog/static/js/ajax.js' %}" defer></script>
 {% endblock %}
 
