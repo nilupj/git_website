@@ -13,10 +13,12 @@ def blog_post_detail(request, slug):
     return render(request, 'blog/post_detail.html', context)
 
 # your_app/views.py
-from django.http import HttpResponse
+
+from django.shortcuts import render
 
 def home(request):
-    return HttpResponse("Welcome to the Django Medical Site!")
+    return render(request, 'home/home_page.html')
+
 
 
 from django.shortcuts import render
