@@ -6,6 +6,12 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
+<form method="POST" action="/some-endpoint/">
+    {% csrf_token %}
+    <input type="text" name="example_field">
+    <button type="submit">Submit</button>
+</form>
+
 <!-- Hero Section with Infinite Image Slider -->
 <section id="hero" class="hero">
     <div id="carouselExampleInfinite" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" data-bs-wrap="true">
@@ -48,5 +54,6 @@
     {{ page.body|richtext }}
 </div>
 
+<script src="{% static 'blog/static/js/ajax.js' %}" defer></script>
 {% endblock %}
 
