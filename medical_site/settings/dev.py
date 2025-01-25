@@ -10,10 +10,10 @@ SESSION_COOKIE_NAME = 'sessionid'  # Default cookie name
 SECRET_KEY = "django-insecure-^!9+@&l4d*w^^%i=k-i+ie7)$gywj+^!=*vs*s81yuj0hg5^!_"
 
 # SECURITY WARNING: define the correct hosts in production!
-ALLOWED_HOSTS = ['git-website-1.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['git-website-.onrender.com', '127.0.0.1']
 
 # Ensure the domain is correctly defined in CSRF_TRUSTED_ORIGINS
-CSRF_TRUSTED_ORIGINS = ['https://git-website-1.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://git-website-.onrender.com']
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
